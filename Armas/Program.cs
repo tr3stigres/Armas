@@ -21,9 +21,8 @@ class Program
             Console.WriteLine("");
             Console.WriteLine("\n\nPráctica 2 - Pociones");
             personajePrincipal = new Personaje("Ada", 100, armaEspada);
-            Console.WriteLine($"Personaje -> {personajePrincipal}");
             personajePrincipal.RecibirDanyo(60);
-            Console.WriteLine($"Recibe daño: {personajePrincipal.Vida} de {personajePrincipal.VidaMaxima}");
+            Console.WriteLine($"Personaje -> {personajePrincipal}");
             Console.WriteLine("");
             IUsable pocionA = new Pocion(30);
             Console.WriteLine($"Creamos la Poción A -> {pocionA}");
@@ -38,7 +37,7 @@ class Program
             Console.WriteLine($"Se toma la poción B: {personajePrincipal.Vida} de {personajePrincipal.VidaMaxima}, Poción -> {pocionB}");
             Console.WriteLine("");
             IUsable pocionC = new Pocion(10);
-            Console.WriteLine($"Poción C -> {pocionC}");
+            Console.WriteLine($"Creamos Poción C -> {pocionC}");
             personajePrincipal.Aplicar(pocionC);
             Console.WriteLine($"Se toma la poción C: {personajePrincipal.Vida} de {personajePrincipal.VidaMaxima}, Poción -> {pocionC}");
             Console.WriteLine("");
@@ -61,13 +60,13 @@ class Program
             personajePrincipal.RecibirDanyo(60);
             Console.WriteLine($"Personaje: {personajePrincipal.Vida} de {personajePrincipal.VidaMaxima}");
             pocionA = new Pocion(30);
-            Console.WriteLine($"Creamos Poción -> {pocionA}");
+            Console.WriteLine($"Creamos poción -> {pocionA}");
             pocionB = pocionA;
             Console.WriteLine($"Clonamos poción -> {pocionB}");
             personajePrincipal.Aplicar(pocionA);
             Console.WriteLine($"Se toma la poción Principal: {personajePrincipal.Vida} de {personajePrincipal.VidaMaxima}, Poción -> {pocionA}");
             personajePrincipal.Aplicar(pocionB);
-            Console.WriteLine($"Se toma la poción el Clon: {personajePrincipal.Vida} de {personajePrincipal.VidaMaxima}, Poción -> {pocionB}");
+            Console.WriteLine($"Se toma la poción Clon: {personajePrincipal.Vida} de {personajePrincipal.VidaMaxima}, Poción -> {pocionB}");
             if (ReferenceEquals(pocionA, pocionB))
                 Console.WriteLine("Las pociones son la misma instancia");
             else
