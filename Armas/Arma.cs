@@ -12,6 +12,6 @@
 
     public override string ToString()
     {
-        return $"{Nombre} {Danyo}";
+        return $"Arma: {Nombre}, Daño causado: {Danyo}";
     }
 }
